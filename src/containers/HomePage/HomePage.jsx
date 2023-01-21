@@ -20,7 +20,7 @@ const HomePage = () => {
           <p>Данный проект представляет из себя небольшой сборник ретро-игр написанных на базе React</p>
         </div>
         <GamesList />
-        <CmdInput />
+        <CmdInput isFocus={true} />
       </div>
       <div className={cn(styles.col, styles.col_right)}>
         <LogotypeCol />

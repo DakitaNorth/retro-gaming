@@ -1,13 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import styles from "./cmdInput.module.css";
 
-const CmdInput = () => {
+const CmdInput = ({ isFocus }) => {
 
     const navigate = useNavigate();
 
     const [isRouteCorrect, setIsRouteCorrect] = useState();
+
+
+    useEffect(() => {
+        console.log(isFocus);
+    }, []);
 
     const resizeInput = () => {
         let input = document.querySelector("." + styles.input);
@@ -45,13 +50,13 @@ const CmdInput = () => {
                     break;
             }
         }
-    }; 
+    };
 
     return (
         <div className={styles.wrapper}>
             <span>Go to&gt;</span>
             <div className={styles.input_wrapper}>
-                <input className={styles.input} autoFocus="autofocus" maxLength="20" onChange={resizeInput} onKeyDown={redirectRoute} />
+                <input className={styles.input} autoFocus={isFocus} maxLength="20" onChange={resizeInput} onKeyDown={redirectRoute} />
             </div>
         </div>
     );

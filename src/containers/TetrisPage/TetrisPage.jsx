@@ -64,7 +64,7 @@ const TetrisPage = () => {
         <div className={styles.aboutRouting}>
           <span>// Введите home для выхода</span>
         </div>
-        <CmdInput />
+        <CmdInput isFocus={false} />
       </div>
       <div className={cn(styles.col, styles.col_right)} id="tetris">
       </div>
