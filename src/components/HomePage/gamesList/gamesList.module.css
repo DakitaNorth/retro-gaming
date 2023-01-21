@@ -1,0 +1,27 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.choose_text {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.games_list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    padding-left: 25px;
+    list-style-type: none;
+}
+
+.games_list__item {
+    margin-bottom: 5px;
+}
+
+.games_list__item span {
+    color: var(--color-yellow);
+}

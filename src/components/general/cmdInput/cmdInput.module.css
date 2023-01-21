@@ -1,0 +1,47 @@
+.wrapper {
+    position: absolute;
+    bottom: 60px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.input_wrapper {
+    position: relative;
+    margin-left: 10px;
+}
+
+.input_wrapper:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    width: 1ch;
+    height: 100%;
+    background-color: #d1fb84;
+
+    animation: blink-bg 1s steps(2,start) infinite;
+}
+
+@keyframes blink-bg {
+    to {
+        visibility: hidden
+    }
+}
+
+.input {
+    width: 1ch;
+    font-family: var(--font-family-main);
+    font-size: var(--font-size-main);
+    color: var(--color-yellow);
+    line-height: var(--line-height-main);
+    text-shadow: 0 0 20px #d1fb84, 0 0 30px #d1fb84;
+    border: none;
+    background-color: transparent;
+
+    caret-color: transparent !important;
+}
+
+.input:focus {
+    outline: none;
+}
