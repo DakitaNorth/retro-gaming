@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import routesConfig from "../../routes/routerConfig";
 
@@ -12,28 +12,31 @@ import styles from "./PcPage.module.css";
 
 const PcPage = () => {
     return (
-        <div className={styles.pc}>
-            <Logotype />
+        <BrowserRouter>
+            <div className={styles.pc}>
+                <Logotype />
 
-            <div className={styles.pc__display}>
-                <DisplayEffects />
+                <div className={styles.pc__display}>
+                    <DisplayEffects />
 
-                <Delayed>
-                    <Routes>
-                        {routesConfig.map((route, index) => (
-                            <Route
-                                key={index}
-                                path={route.path}
-                                element={route.element}
-                            />
-                        ))}
-                    </Routes>
-                </Delayed>
+                    <Delayed>
+                        <Routes>
+                            {routesConfig.map((route, index) => (
+                                <Route
+                                    key={index}
+                                    path={route.path}
+                                    element={route.element}
+                                />
+                            ))}
+                        </Routes>
+                    </Delayed>
 
+                </div>
+
+                <ControlPanel />
             </div>
+        </BrowserRouter>
 
-            <ControlPanel />
-        </div>
     );
 }
 
