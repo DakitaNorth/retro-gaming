@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import styles from "./cmdInput.module.css";
 
@@ -7,21 +7,24 @@ const CmdInput = ({ isFocus }) => {
 
     const navigate = useNavigate();
 
-    const [isRouteCorrect, setIsRouteCorrect] = useState();
+    const location = useLocation();
 
+    const [isRouteCorrect, setIsRouteCorrect] = useState(true);
+    const [isHomeRoute, setIsHomeRoute] = useState(true);
 
     useEffect(() => {
-        console.log(isFocus);
+        if (location.pathname !== "/") {
+            setIsHomeRoute(false);
+        }
+        else {
+            setIsHomeRoute(true);
+        }
     }, []);
 
     const resizeInput = () => {
         let input = document.querySelector("." + styles.input);
 
         input.style.width = input.value.length + 1 + "ch";
-    };
-
-    const errorRouteHandler = () => {
-
     };
 
     const redirectRoute = e => {
@@ -46,7 +49,7 @@ const CmdInput = ({ isFocus }) => {
                     navigate("/");
                     break;
                 default:
-                    setIsRouteCorrect();
+                    setIsRouteCorrect(false);
                     break;
             }
         }
@@ -54,9 +57,27 @@ const CmdInput = ({ isFocus }) => {
 
     return (
         <div className={styles.wrapper}>
-            <span>Go to&gt;</span>
-            <div className={styles.input_wrapper}>
-                <input className={styles.input} autoFocus={isFocus} maxLength="20" onChange={resizeInput} onKeyDown={redirectRoute} />
+            {!isRouteCorrect ? (
+                <div className={styles.error_wrapper}>
+                    <span>// Некорректный путь</span>
+                </div>
+            ) : (
+                null
+            )}
+
+            {isHomeRoute ? (
+                null
+            ) : (
+                <div className={styles.about_wrapper}>
+                    <span>// Введите home для шага назад</span>
+                </div>
+            )}
+
+            <div className={styles.cmd_wrapper}>
+                <span>Go to&gt;</span>
+                <div className={styles.input_wrapper}>
+                    <input className={styles.input} autoFocus={isFocus} maxLength="20" onChange={resizeInput} onKeyDown={redirectRoute} />
+                </div>
             </div>
         </div>
     );

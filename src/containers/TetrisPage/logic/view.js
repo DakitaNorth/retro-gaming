@@ -39,12 +39,14 @@ export default class View {
     };
 
     renderPauseScreen() {
+        this.clearScreen();
+
         this.context.fillStyle = "#D1FB84";
         this.context.font = '18px "Press Start 2P"';
         this.context.textAlign = "center";
         this.context.textBaseline = "middle";
-        this.context.fillText("Press SPACE", this.width / 2 - 65, this.height / 2 - 30);
-        this.context.fillText("To Resume", this.width / 2 - 65, this.height / 2);
+        this.context.fillText("Press SPACE", this.width / 2, this.height / 2 - 30);
+        this.context.fillText("To Resume", this.width / 2, this.height / 2);
     };
 
     renderEndScreen({ score }) {

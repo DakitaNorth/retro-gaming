@@ -1,6 +1,7 @@
 :root {
   --color-yellow: #d1fb84;
   --color-dark-green: #4ea028;
+  --color-dark-red: #a02828;
   --color-dark-gray: #10100e;
 
   --font-family-main: "Press Start 2P", sans-serif;
@@ -9,7 +10,9 @@
   --text-shadow-main: 0 0 20px #d1fb84, 0 0 30px #d1fb84;
 
   --font-size-small: 10px;
-  --text-shadow-small: 0 0 20px #4ea028, 0 0 30px #4ea028;
+
+  --text-shadow-correct: 0 0 20px #4ea028, 0 0 30px #4ea028;
+  --text-shadow-error: 0 0 20px #a02828, 0 0 30px #a02828;
 
   --background-default: url(../static/bg.png);
 
