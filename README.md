@@ -6,4 +6,4 @@
 ![Alt-текст](https://github.com/DakitaNorth/retro-gaming/blob/master/screenOfProject.png)
 
 ## 🖳 Demo
---ссылка на github-pages--
+https://dakitanorth.github.io/retro-gaming/
