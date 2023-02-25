@@ -2,8 +2,8 @@ import { NavLink } from "react-router-dom";
 
 import cn from "classnames";
 
-import soundOffImg from "./img/soundOff.svg";
-import soundOnImg from "./img/soundOn.svg";
+import musicOffImg from "./img/musicOff.svg";
+import musicOnImg from "./img/musicOn.svg";
 
 import pcOffImg from "./img/pcOff.svg";
 import pcOnImg from "./img/pcOn.svg";
@@ -26,18 +26,18 @@ const ControlPanel = () => {
             audio.classList.add("stop");
         }
 
-        toggleSoundIcon();
+        toggleMusicIcon();
     };
 
-    const toggleSoundIcon = () => {
+    const toggleMusicIcon = () => {
         let soundImg = document.querySelector("." + styles.music_button);
         console.log(soundImg.getAttribute("src"));
 
-        if (soundImg.getAttribute("src") === soundOffImg) {
-            soundImg.setAttribute("src", soundOnImg);
+        if (soundImg.getAttribute("src") === musicOffImg) {
+            soundImg.setAttribute("src", musicOnImg);
         }
         else {
-            soundImg.setAttribute("src", soundOffImg);
+            soundImg.setAttribute("src", musicOffImg);
         }
     };
 
@@ -46,8 +46,11 @@ const ControlPanel = () => {
             <NavLink className={styles.buttons__pc_status} to="/">
                 <img src={pcOnImg} alt="on-off button of pc" />
             </NavLink>
-            <button className={styles.buttons__sound_status} type="button" onClick={toggleMusicStatus}>
+            {/* <button className={styles.buttons__sound_status} type="button" onClick={toggleMusicStatus}>
                 <img className={styles.music_button} src={soundOffImg} alt="on-off sound" />
+            </button> */}
+            <button className={styles.buttons__sound_status} type="button" onClick={toggleMusicStatus}>
+                <img className={styles.music_button} src={musicOffImg} alt="on-off sound" />
             </button>
             <audio className="audio stop" src={bgMusic} loop></audio>
         </div>
