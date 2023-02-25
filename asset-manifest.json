@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3eee64a9.css",
+    "main.js": "/static/js/main.5b15430e.js",
+    "static/media/bg-music.mp3": "/static/media/bg-music.716eade0a015b4ff8028.mp3",
+    "static/media/sadFrog.mp4": "/static/media/sadFrog.e8eaf8a70bdd74709579.mp4",
+    "static/media/bg.png": "/static/media/bg.a43895c9881db043cef1.png",
+    "static/media/pc-pixel.png": "/static/media/pc-pixel.fbab8395404d096bc623.png",
+    "static/media/noise.png": "/static/media/noise.b63abfeaf8493e739956.png",
+    "static/media/pcOff.svg": "/static/media/pcOff.8d5e0959229615d2e70b531bb7bb0546.svg",
+    "static/media/pcOn.svg": "/static/media/pcOn.e74f4ca1403ab1eed8231b42766686b0.svg",
+    "static/media/musicOff.svg": "/static/media/musicOff.c795257f35b9211a6899a5f28ae8cda5.svg",
+    "static/media/musicOn.svg": "/static/media/musicOn.b5ca01c26620d38bcf18693e41690999.svg",
+    "static/media/logotype.svg": "/static/media/logotype.30fe79e040dd0e1445cf56edc145eaab.svg",
+    "static/media/Logotype-2.svg": "/static/media/Logotype-2.063deb9d244482aebdcd.svg",
+    "static/media/Logotype-1.svg": "/static/media/Logotype-1.c65435c67416ce4aa453.svg",
+    "static/media/glare.svg": "/static/media/glare.3ed6d71b510325219539.svg",
+    "index.html": "/index.html",
+    "main.3eee64a9.css.map": "/static/css/main.3eee64a9.css.map",
+    "main.5b15430e.js.map": "/static/js/main.5b15430e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3eee64a9.css",
+    "static/js/main.5b15430e.js"
+  ]
+}
