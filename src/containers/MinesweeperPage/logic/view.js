@@ -17,6 +17,8 @@ export default class View {
         this.canvas.height = this.height;
         this.context = this.canvas.getContext("2d");
 
+        this.canvas.style.cursor = "pointer";
+
         this.playfieldBorderWidth = 4;
         this.playfieldX = this.playfieldBorderWidth + 5;
         this.playfieldY = this.playfieldBorderWidth + 5;
@@ -94,7 +96,7 @@ export default class View {
         this.context.lineWidth = this.playfieldBorderWidth;
         this.context.strokeRect(this.panelX, this.panelY, this.panelWidth, this.panelHeight);
 
-        this.context.fillStyle = "white";
+        this.context.fillStyle = "#D1FB84";
         this.context.font = '18px "Press Start 2P"';
         this.context.textAlign = "center";
         this.context.textBaseline = "middle";
@@ -118,7 +120,7 @@ export default class View {
         this.context.font = '18px "Press Start 2P"';
         this.context.textAlign = "center";
         this.context.textBaseline = "middle";
-        
+
         this.context.fillText("Press SPACE", this.width / 2, this.height / 2 - 30);
         this.context.fillText("To Start", this.width / 2, this.height / 2);
     };
@@ -139,11 +141,11 @@ export default class View {
         this.context.textAlign = "center";
         this.context.textBaseline = "middle";
 
-        this.context.fillText("GAME OVER", this.width / 2, this.height / 2 - 60);
-        this.context.fillText(`Time: ${time}`, this.width / 2, this.height / 2 - 30);
-        this.context.fillText(`Guessed Bombs: ${guessBombCount}`, this.width / 2, this.height / 2 + 30);
-        this.context.fillText("Press SPACE", this.width / 2, this.height / 2 + 60);
-        this.context.fillText("To Restart", this.width / 2, this.height / 2 + 90);
+        this.context.fillText("GAME OVER", this.width / 2, this.height / 2 - 120);
+        this.context.fillText(`Time: ${time}`, this.width / 2, this.height / 2 - 60);
+        this.context.fillText(`Guessed Bombs: ${guessBombCount}`, this.width / 2, this.height / 2 - 30);
+        this.context.fillText("Press SPACE", this.width / 2, this.height / 2 + 30);
+        this.context.fillText("To Restart", this.width / 2, this.height / 2 + 60);
     };
 
     renderWinScreen(time, guessBombCount) {
@@ -152,10 +154,10 @@ export default class View {
         this.context.textAlign = "center";
         this.context.textBaseline = "middle";
 
-        this.context.fillText("You are win!", this.width / 2, this.height / 2 - 60);
-        this.context.fillText(`Time: ${time}`, this.width / 2, this.height / 2 - 30);
-        this.context.fillText(`Guessed Bombs: ${guessBombCount}`, this.width / 2, this.height / 2 + 30);
-        this.context.fillText("Press SPACE", this.width / 2, this.height / 2 + 60);
-        this.context.fillText("To Restart", this.width / 2, this.height / 2 + 90);
+        this.context.fillText("You are win!", this.width / 2, this.height / 2 - 120);
+        this.context.fillText(`Time: ${time}`, this.width / 2, this.height / 2 - 60);
+        this.context.fillText(`Guessed Bombs: ${guessBombCount}`, this.width / 2, this.height / 2 - 30);
+        this.context.fillText("Press SPACE", this.width / 2, this.height / 2 + 30);
+        this.context.fillText("To Restart", this.width / 2, this.height / 2 + 60);
     };
 };

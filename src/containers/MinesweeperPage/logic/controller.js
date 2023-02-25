@@ -81,6 +81,8 @@ export default class Controller {
 
         this.stopTimer();
 
+        this.view.clearAllCanvas();
+
         this.view.renderPauseScreen();
     };
 
@@ -90,8 +92,7 @@ export default class Controller {
 
         this.stopTimer();
 
-        this.matrix.openAllBombs();
-        this.view.renderMatrix(this.matrix);
+        this.view.clearAllCanvas();
 
         this.view.renderGameOverScreen(this.timerValue, this.guessBombCount);
     };
@@ -102,7 +103,7 @@ export default class Controller {
 
         this.stopTimer();
 
-        this.view.renderMatrix(this.matrix);
+        this.view.clearAllCanvas();
 
         this.view.renderWinScreen(this.timerValue, this.guessBombCount);
     };
@@ -147,7 +148,7 @@ export default class Controller {
     };
 
     handleKeydown(e) {
-        switch (e.key) {
+        switch (e.code) {
             case "Space":
                 if (this.isGameOver) {
                     this.reset();

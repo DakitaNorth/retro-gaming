@@ -141,8 +141,6 @@ export default class Matrix {
         this.addNumbers();
         
         this.guessBombCount = this.isAllBombsGuessed();
-
-        console.log(this.matrix);
     };
 
     getState() {
