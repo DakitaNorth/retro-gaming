@@ -1,5 +1,6 @@
 import HomePage from "../containers/HomePage/HomePage";
 import TetrisPage from "../containers/TetrisPage/TetrisPage";
+import MinesweeperPage from "../containers/MinesweeperPage/MinesweeperPage";
 
 const routesConfig = [
     {
@@ -15,16 +16,8 @@ const routesConfig = [
         element: <TetrisPage />
     },
     {
-        path: "/ping-pong",
-        element: <HomePage />
-    },
-    {
-        path: "/space-invaders",
-        element: <HomePage />
-    },
-    {
-        path: "/pc-off",
-        element: <HomePage />
+        path: "/minesweeper",
+        element: <MinesweeperPage />
     }
 ];
 

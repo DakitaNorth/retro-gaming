@@ -31,16 +31,14 @@ const CmdInput = ({ isFocus }) => {
         if (e.key === "Enter") {
             let input = document.querySelector("." + styles.input);
 
-            switch (input.value) {
+            let inputValue = input.value.toLowerCase();
+
+            switch (inputValue) {
                 case "tetris":
                     console.log(input.value);
                     navigate("/" + input.value);
                     break;
-                case "ping-pong":
-                    console.log(input.value);
-                    navigate("/" + input.value);
-                    break;
-                case "space-invaders":
+                case "minesweeper":
                     console.log(input.value);
                     navigate("/" + input.value);
                     break;

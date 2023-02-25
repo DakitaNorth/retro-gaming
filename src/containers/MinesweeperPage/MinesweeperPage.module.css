@@ -18,7 +18,7 @@
 }
 
 .controls__header {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .controls__list {
@@ -35,27 +35,14 @@
 
 .controls__item {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    width: 200px;
-    margin-bottom: 25px;
-}
-
-.controls__item img {
-    height: 45px;
     margin-bottom: 15px;
 }
 
-.controls__item span {
-    text-align: center;
-}
-
-.controls__start_pause {
+.controls__item img {
     width: 45px;
-}
-
-.controls__figure {
-    width: 70px;
+    height: 45px;
+    margin-right: 15px;
 }
 
 .col_right {

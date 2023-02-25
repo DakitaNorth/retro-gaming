@@ -9,11 +9,11 @@ const GamesList = () => {
         },
         {
             id: 1,
-            name: "Ping-pong"
+            name: "Minesweeper"
         },
         {
             id: 2,
-            name: "Space-Invaders"
+            name: "..."
         },
     ];
 
