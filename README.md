@@ -2,7 +2,8 @@
 
 Пэт-проект, вдохновленный эпохой ретро-гейминга на DOS-системах.
 
-![Alt-текст](https://raw.githubusercontent.com/dev-pandaren/react-star-wars/__temp__/_temp/readme/lighthouse.png)
+## 🖵 Screenshot
+![Alt-текст](https://github.com/DakitaNorth/retro-gaming/blob/master/screenOfProject.png)
 
 ## 🖳 Demo
 --ссылка на github-pages--
